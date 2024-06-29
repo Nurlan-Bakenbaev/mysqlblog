@@ -1,11 +1,10 @@
 "use client";
 import Link from "next/link";
-import React, { useRef } from "react";
 
 const Login = () => {
   return (
     <div className="flex items-center justify-center min-h-screen ">
-      <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl w-full max-w-md">
+      <div className="bg-white p-6 rounded-lg duration-300 shadow-lg hover:shadow-2xl w-full max-w-md">
         <h1 className="text-2xl font-bold mb-6 text-center">Login</h1>
         <form className="flex flex-col space-y-4">
           <input
@@ -27,8 +26,8 @@ const Login = () => {
         </form>
         <div className="text-right mt-4">
           <Link href="/register">
-            <span className="text-xs text-blue-500 hover:underline">
-              Don't have an account? Register
+            <span className="text-xs text-blue-500">
+              Don't have an account?
             </span>
           </Link>
         </div>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: #233f56;
+  --primary-color: #1f2937;
   --secondary-color: #524e4a;
   --accent-color: #38a169;
   --text-color: #2d3748;
@@ -22,11 +22,12 @@
 }
 nav {
   background-color: var(--secondary-color);
+  color: ;
 }
 footer {
   background-color: var(--primary-color);
+  color: white;
 }
-
 /* Styling*/
 .dflex {
   display: flex;
