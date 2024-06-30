@@ -1,4 +1,5 @@
 "use client";
+import { TextField } from "@mui/material";
 import Link from "next/link";
 
 const Register = () => {
@@ -7,21 +8,16 @@ const Register = () => {
       <div className="bg-white p-6 rounded-lg duration-300 shadow-lg hover:shadow-2xl w-full max-w-md">
         <h1 className="text-2xl font-bold mb-6 text-center">Register</h1>
         <form className="flex flex-col space-y-4">
-          <input
-            type="text"
-            placeholder="Username"
-            className="p-3 border rounded focus:outline-none focus:ring focus:border-blue-300"
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            className="p-3 border rounded focus:outline-none focus:ring focus:border-blue-300"
-          />
-          <input
+          <TextField id="username" label="Username" variant="outlined" />
+          <TextField required id="outlined-required" label="Email" />
+          <TextField
+            required
+            id="password"
+            label="Password"
             type="password"
-            placeholder="Password"
-            className="p-3 border rounded focus:outline-none focus:ring focus:border-blue-300"
+            autoComplete="current-password"
           />
+
           <button
             type="submit"
             className="p-3 bg-blue-500 text-white rounded hover:bg-blue-600"
