@@ -3,10 +3,10 @@ import React from "react";
 import { navLinks } from "@/helpers/Navlinks";
 const Navbar = () => {
   return (
-    <nav className="bg-gray-800 p-4 text-white">
-      <div className="container mx-auto flex justify-between items-center">
+    <nav className="bg-gray-800 text-white px-2">
+      <div className="container mx-auto flex justify-between items-center h-[80px]">
         <div className="text-white xs:text-base text-2xl font-bold">
-          MySQL-App
+          <Link href={"/"}> MySQL-App</Link>
         </div>
         <ul className="flex space-x-5">
           {navLinks.map(({ text, url, icon }) => (
