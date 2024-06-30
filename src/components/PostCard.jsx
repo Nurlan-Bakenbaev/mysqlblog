@@ -3,6 +3,7 @@ import Categories from "./Categories";
 import React, { useState, useEffect } from "react";
 import { useGetAllThePostsQuery } from "@/redux/service/reduxApi";
 import { AiOutlineDislike, AiOutlineLike } from "react-icons/ai";
+import Link from "next/link";
 
 const PostCard = () => {
   const [page, setPage] = useState(1);
@@ -28,6 +29,8 @@ const PostCard = () => {
       <div className="flex justify-between gap-5  bg-slate-50">
         <Categories />
       </div>
+      <h1 className="text-3xl text-center mt-5 font-semibold">Posts</h1>
+
       <div className="mt-8">
         {isLoading && <p className="text-center">Loading...</p>}
         {isError && (
@@ -43,13 +46,25 @@ const PostCard = () => {
                   key={post.id}
                   className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 border border-gray-300  rounded-lg shadow-md hover:shadow-lg hover:bg-gray-50 transition-shadow duration-300"
                 >
-                  <h2 className="text-xl font-semibold mb-2">{post.title}</h2>
+                  <h2 className="text-md md:text-lg lg:text-2xl font-semibold mb-2">
+                    {post.title}
+                  </h2>
                   <p className="text-gray-700">
                     {truncateText(post.body, 200)}
                   </p>
-                  {post.tags.map((tag) => (
-                    <p key={tag}>{tag}</p>
-                  ))}
+                  <div className="flex flex-row">
+                    {post.tags.map((tag) => (
+                      <p key={tag}>
+                        <Link
+                          className="text-blue-500"
+                          href={`posts/search?q=${tag}`}
+                        >
+                          {" "}
+                          #{tag}
+                        </Link>
+                      </p>
+                    ))}
+                  </div>
                   <div className="bg-slate-100 flex flex-row justify-between px-5 py-2">
                     <div className="dflex items-center gap-2">
                       <span className="text-green-500  text-xl">
