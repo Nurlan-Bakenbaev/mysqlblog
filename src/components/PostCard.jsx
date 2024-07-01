@@ -9,15 +9,12 @@ import CardActions from "@mui/material/CardActions";
 import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import { red } from "@mui/material/colors";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import Link from "next/link";
+
 export default function PostCard() {
-  const [expanded, setExpanded] = React.useState(false);
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
   return (
-    <Card sx={{ maxWidth: 340 }}>
+    <Card sx={{ maxWidth: 320 }}>
       <CardMedia
         component="img"
         height="194"
@@ -31,13 +28,22 @@ export default function PostCard() {
           mussels, if you like.
         </Typography>
       </CardContent>
-      <CardHeader
-        avatar={<Avatar sx={{ bgcolor: red[500] }}>A</Avatar>}
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
-      />
+      <Link className="" href={"/user/userposts"}>
+        <CardHeader
+          avatar={
+            <Avatar
+              src={
+                "https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              }
+              sx={{ width: 56, height: 56 }}
+            />
+          }
+          title="User name"
+          subheader="September 14, 2024"
+        />{" "}
+      </Link>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
+        <IconButton>
           <FavoriteIcon />
         </IconButton>
       </CardActions>
