@@ -5,7 +5,7 @@ import PopularPosts from "@/components/PopularPosts";
 const SinglePost = () => {
   return (
     <div
-      className="mt-6 flex flex-col-reverse md:flex-row justify-center gap-6
+      className="mt-6 flex flex-col md:flex-row justify-center gap-6
      align-top "
     >
       <div className="flex-2">
@@ -19,7 +19,7 @@ const SinglePost = () => {
           }
         />
       </div>
-      <div>
+      <div >
         <PopularPosts />
       </div>
     </div>

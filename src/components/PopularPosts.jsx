@@ -6,11 +6,15 @@ const PopularPosts = () => {
     <div>
       <div className="flex-1 ">
         <h5 className="text-lg text-center">Posts you may like</h5>
-        <div className="flex overflow-x-auto  min-w-[280px] mt-2 flex-row md:flex-col gap-3">
-          <PostCard maxWidthSize={270} />
-          <PostCard maxWidthSize={270} />
-          <PostCard maxWidthSize={270} />
-          <PostCard maxWidthSize={270} />
+        <div
+          className="flex overflow-x-auto mt-2 py-5
+         flex-row md:flex-col gap-3"
+        >
+          <PostCard />
+          <PostCard />
+          <PostCard />
+          <PostCard />
+          <PostCard />
         </div>
       </div>
     </div>

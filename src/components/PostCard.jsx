@@ -15,26 +15,29 @@ export default function PostCard({ maxWidthSize, contentText, img }) {
   return (
     <Card
       sx={{
+        minWidth: 250,
         maxWidth: maxWidthSize || 320,
         "&:hover": {
           transition: "transform 0.6s ease-in-out",
           boxShadow: 4,
           backgroundColor: "#f2f3f4",
         },
-        borderRadius: "18px",
+        borderRadius: "10px",
+        borderTopRightRadius: "40px",
+        borderBottomLeftRadius: "40px",
       }}
     >
       <Link href={"/post/123"}>
         {img && (
           <CardMedia
             component="img"
-            height="194"
+            height="195"
             image={img}
-            alt="Paella dish"
+            alt={`Photo Title`}
           />
         )}
         <CardContent>
-          <Typography variant="h5">The Awesome Title</Typography>
+          <Typography variant="body1">The Awesome Title</Typography>
           <Typography variant="body2">
             {contentText ? contentText : "Text Content"}
           </Typography>
