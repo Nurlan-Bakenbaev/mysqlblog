@@ -11,37 +11,47 @@ import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import Link from "next/link";
 
-export default function PostCard({ maxWidthSize,contentText }) {
+export default function PostCard({ maxWidthSize, contentText, img }) {
   return (
-    <Card sx={{ maxWidth: maxWidthSize || 320 }}>
-      <Link href={"/123"}>
-        <CardMedia
-          component="img"
-          height="194"
-          image="https://images.unsplash.com/photo-1504805572947-34fad45aed93?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Paella dish"
-        />
+    <Card
+      sx={{
+        maxWidth: maxWidthSize || 320,
+        "&:hover": {
+          transition: "transform 0.6s ease-in-out",
+          boxShadow: 4,
+          backgroundColor: "#f2f3f4",
+        },
+        borderRadius: "18px",
+      }}
+    >
+      <Link href={"/post/123"}>
+        {img && (
+          <CardMedia
+            component="img"
+            height="194"
+            image={img}
+            alt="Paella dish"
+          />
+        )}
         <CardContent>
           <Typography variant="h5">The Awesome Title</Typography>
-          <Typography variant="body3">
+          <Typography variant="body2">
             {contentText ? contentText : "Text Content"}
           </Typography>
         </CardContent>
       </Link>
-      <Link className=" hover:scale-110" href={"/user/userposts"}>
+      <Link href={"/user/userposts"}>
         <CardHeader
           sx={{
             "&:hover": {
-              transform: "scale(1.01)",
-              transition: "transform 3s ease-in-out",
-              boxShadow: 2,
-              backgroundColor: "#F9F6EE",
+              transform: "scale(1.03)",
+              transition: "transform 0.5s ease-in-out",
             },
           }}
           avatar={
             <Avatar
               src={
-                "https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               }
               sx={{ width: 56, height: 56 }}
             />
