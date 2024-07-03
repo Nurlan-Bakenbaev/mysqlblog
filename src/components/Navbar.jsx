@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className="bg-gray-800 text-white px-2">
       <div className="container mx-auto flex justify-between items-center h-[80px]">
         <div className="text-white xs:text-base text-2xl font-bold">
-          <Link href={"/"}> MySQL-App</Link>
+          <Link href={"/"}> MySQL-BlogApp</Link>
         </div>
         <ul className="flex space-x-5">
           {navLinks.map(({ text, url, icon }) => (
