@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className="min-h-screen">
           <Navbar />
-          <div className="w-full lg:w-[80%] mx-auto">{children}</div>
+          <div className="w-full lg:w-[80%] p-4 mx-auto">{children}</div>
         </div>
         <Footer />
       </body>

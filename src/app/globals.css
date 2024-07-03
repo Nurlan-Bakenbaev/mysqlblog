@@ -31,3 +31,15 @@ footer {
   display: flex;
   justify-content: center;
 }
+.posts-container {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.post-title {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 10px 0px 10px 0px;
+  text-align: center;
+}
