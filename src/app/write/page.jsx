@@ -10,10 +10,12 @@ const WritePost = () => {
     <div>
       <form className="px-6 mt-8 flex flex-col gap-5">
         <input
-          className="border w-full py-4 pl-3"
+          className="border w-full text-lg py-4 pl-3 font-semibold"
           type="text"
-          placeholder="Post title"/>
+          placeholder=" Awesome title"
+        />
         <ReactQuill
+          placeholder="Tell your story..."
           modules={modules}
           formats={formats}
           theme="snow"

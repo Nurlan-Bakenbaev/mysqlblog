@@ -3,7 +3,6 @@ export const modules = {
     [{ header: "1" }, { header: "2" }, { font: [] }],
     [{ list: "ordered" }, { list: "bullet" }],
     ["bold", "italic", "underline"],
-    ["image"],
     [{ align: [] }],
     [{ color: [] }, { background: [] }],
   ],
