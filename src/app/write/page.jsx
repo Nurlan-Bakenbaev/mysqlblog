@@ -4,6 +4,32 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 const WritePost = () => {
   const [postValue, setPostValue] = useState("");
+
+  const modules = {
+    toolbar: [
+      [{ header: "1" }, { header: "2" }, { font: [] }],
+      [{ list: "ordered" }, { list: "bullet" }],
+      ["bold", "italic", "underline"],
+      ["image"],
+      [{ align: [] }],
+      [{ color: [] }, { background: [] }],
+    ],
+  };
+
+  const formats = [
+    "header",
+    "font",
+    "size",
+    "bold",
+    "italic",
+    "underline",
+    "list",
+    "bullet",
+    "image",
+    "color",
+    "background",
+    "align",
+  ];
   console.log(postValue);
   return (
     <div>
@@ -13,7 +39,13 @@ const WritePost = () => {
           type="text"
           placeholder="Post title"
         />
-        <ReactQuill theme="snow" value={postValue} onChange={setPostValue} />;
+        <ReactQuill
+          modules={modules}
+          formats={formats}
+          theme="snow"
+          value={postValue}
+          onChange={setPostValue}
+        />
       </form>
     </div>
   );
